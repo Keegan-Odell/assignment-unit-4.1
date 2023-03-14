@@ -121,29 +121,31 @@ console.log(intChecker(input));
 
 //Given an array of integers nums and an integer target.
 //return indices of the two numbers such that they add up to target.
-//You may assume that each input would have exactly one solution
-//and you may not use the same element twice.
+//You may assume that each input would have exactly one solution.
+//You may not use the same element twice.
 //You can return the answer in any order.
 
-const nums = [3, 3];
-let solvedArray = [];
+const nums = [5, 2, 11, 7]; //these are the nums we will check
+const target = 9; //this will be the number that the nums in the array will need to add to
+let solvedArray = []; // this is where we will store the numbers successful numbers to display
 
 function twoSum(target, array) {
-  let j = 0;
+  let j = 0; //this is our first counter which will iterate every time our first loop is completed
 
   for (let i = 0; i < array.length; i++) {
-    let k = 0;
-    let goal = target - array[i];
+    let k = 0; //this is our second counter used to count how many trips around the array - resets to 0 if no matches found
+    let goal = target - array[i]; //this is the number we are looking for. if we find this number we have a completed array
 
     for (let i = 0; i < array.length; i++) {
       if (goal === array[k + 1]) {
-        solvedArray.push(j, k + 1);
-        return solvedArray;
+        //we add k + 1 because we dont want to check over the first number in our array
+        solvedArray.push(j, k + 1); // if we find a match,we add our 2 counters into the solved array
+        return solvedArray; //return it
       }
-      k++;
+      k++; // k + 1 = k
     }
-    j++;
+    j++; // j + 1 = j
   }
 }
 
-console.log(twoSum(6, nums));
+console.log(twoSum(target, nums));
