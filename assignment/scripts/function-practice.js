@@ -119,6 +119,8 @@ console.log(intChecker(input));
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
 
+//https://leetcode.com/problems/two-sum/
+
 //Given an array of integers nums and an integer target.
 //return indices of the two numbers such that they add up to target.
 //You may assume that each input would have exactly one solution.
